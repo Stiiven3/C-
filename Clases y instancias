@@ -1,0 +1,44 @@
+using System;
+
+    namespace Clase{
+
+        class ClaseInstancia {
+
+            static void Main(string[]args){
+                
+                instancia perro1 = new instancia();/* referenciando la clase instancia 
+                para poder llamar sus variables y sus metodos*/ 
+
+                perro1.nombre="Firulay";// llamando la variable de la otra clase y asignadole valor
+                perro1.comida="Bolita";// llamando la variable de la otra clase y asignadole valor
+                perro1.altura=10;// llamando la variable de la otra clase y asignadole valor
+
+                instancia perro2 = new instancia();/* referenciando la clase instancia 
+                para poder llamar sus variables y sus metodos*/
+
+                perro2.nombre="Loki";// llamando la variable de la otra clase y asignadole valor
+                perro2.comida="Bolita";// llamando la variable de la otra clase y asignadole valor
+                perro2.altura=36;// llamando la variable de la otra clase y asignadole valor
+
+                perro1.imprimir();/* llamando  al metodo de la otra clase 
+                para que ejecute la linea de codigo que esta dentro*/
+                perro2.imprimir();
+                
+            }
+        }
+    
+        class instancia{
+            
+            //variables
+             public string nombre;
+             public string comida;
+             public int altura;
+
+            public void imprimir()
+            {
+                Console.WriteLine("Nombre del perro\t\t"+nombre);
+                Console.WriteLine("Que comida come el perro:\t"+comida);
+                Console.WriteLine("Altura del perro:\t\t"+altura+"\n");
+            }
+        }     
+    }
